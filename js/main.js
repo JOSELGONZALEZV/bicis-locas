@@ -58,11 +58,10 @@ function validateForm(){
 	
 	}
 
-	var elegir = $(".form-control").val().trim();
-		if (elegir == "" ){
+	var elegir = $("select.form-control").val().trim();
+		if (elegir == "0" ){
 		$("select.form-control").parent().append('<span>debe seleccionar una opción</span>');
 	
 	}
-	
-	
+		
 }
