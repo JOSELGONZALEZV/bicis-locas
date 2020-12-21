@@ -31,37 +31,44 @@ function validateForm(){
 	/* Escribe tú código aquí */
 	var nombre = $("#name").val().trim();
 		if ( sonLetrasSolamente(nombre) == false || validarPrimeraLetra(nombre) == true){		
-		$("#name").parent().append('<span>campo nombre obligatorio</span>');}
+		$("#name").parent().append('<span>campo nombre obligatorio</span>');
+	}
 
 	var apellido = $("#lastname").val().trim();
 		if (sonLetrasSolamente(apellido) == false || validarPrimeraLetra(apellido) == true){
-		$("#lastname").parent().append('<span>campo apellido obligatorio</span>');}
+		$("#lastname").parent().append('<span>campo apellido obligatorio</span>');
+	}
 
 	var mail = $("#input-email").val().trim();
 		if (validarEmail(mail) == false){
-		$("#input-email").parent().append('<span>campo mail obligatorio</span>');}
+		$("#input-email").parent().append('<span>campo mail obligatorio</span>');
+	}
 	
 
 	var identif = $("#input-password").val().trim();
 		if (identif == 123456 || identif == 098765 || identif == "password" || identif.length < 6 ){
-		$("#input-password").parent().append('<span>campo password obligatorio</span>');}
+		$("#input-password").parent().append('<span>campo password obligatorio</span>');
+	}
 
 	var elegir = $("select.form-control").val().trim();
 		if (elegir == "0" ){
-		$("select.form-control").parent().append('<span>debe seleccionar una opción</span>');}
+		$("select.form-control").parent().append('<span>debe seleccionar una opción</span>');
+	}
 	var contacto = $("#input-social").val();
 	 	if (contacto != ""){
 		$(".input-group").addClass("input-box");
-	  	$("#input-social").parent().append('<span> recuerda seguirnos en twitter</span>');}
+		  $("#input-social").parent().append('<span> recuerda seguirnos en twitter</span>');
+	}
 	
 		$(".checkbox ").children().children().addClass("registro");
 		if ($("input.registro").is(":checked")){
 		alert("Gracias te enviaremos informacion a tu correo");
-		}
-	
 	}
+}
+	
 
-		
+
+
 		
 
 
