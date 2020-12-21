@@ -31,20 +31,20 @@ function validateForm(){
 	/* Escribe tú código aquí */
 	var nombre = $("#name").val().trim();
 		if ( sonLetrasSolamente(nombre) == false || validarPrimeraLetra(nombre) == true){		
-		$("#name").parent().append('<span>campo nombre obligatorio</span>');}
+		$("#name").parent().append('<span>ingresar primera letra mayuscula y sin numeros o signos</span>');}
 
 	var apellido = $("#lastname").val().trim();
 		if (sonLetrasSolamente(apellido) == false || validarPrimeraLetra(apellido) == true){
-		$("#lastname").parent().append('<span>campo apellido obligatorio</span>');}
+		$("#lastname").parent().append('<span>ingresar primera letra mayuscula sin numeros o signos</span>');}
 
 	var mail = $("#input-email").val().trim();
 		if (validarEmail(mail) == false){
-		$("#input-email").parent().append('<span>campo mail obligatorio</span>');}
+		$("#input-email").parent().append('<span>campo mail obligatorio ingresar formato @ mail</span>');}
 	
 
 	var identif = $("#input-password").val().trim();
-		if (identif == 123456 || identif == 098765 || identif == "password" || identif.length < 6 ){
-		$("#input-password").parent().append('<span>campo password obligatorio</span>');}
+		if (identif == 123456 || identif == 098765 || identif == "password" || identif.length <= 6 ){
+		$("#input-password").parent().append('<span>password obligatorio con minimo 6 caracteres</span>');}
 
 	var elegir = $("select.form-control").val().trim();
 		if (elegir == "0" ){
