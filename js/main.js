@@ -30,7 +30,7 @@ function validateForm(){
 	
 	/* Escribe tú código aquí */
 	var nombre = $("#name").val().trim();
-	if (sonLetrasSolamente(nombre) == false){		
+	if 	(sonLetrasSolamente(nombre) == false){		
 		$("#name").parent().append('<span>ingresar solo letras, sin numeros o signos</span>');
 	}
 	else if (validarPrimeraLetra(nombre) == true){
